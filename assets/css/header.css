@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'CormorantGaramond-Bold';
+  src: url('../fonts/CormorantGaramond-BoldItalic.ttf');
+  }
+  @font-face {
+      font-family: 'CormorantGaramond-Light';
+      src: url('../fonts/CormorantGaramond-Light.ttf');
+  }
+
+:root {
+  --index: calc(1vw + 1vh);
+  --transition: 2s cubic-bezier(0.05, 0.5, 0, 1);
+  --sizeButton: calc(var(--index)*5);
+  --sizeButtonActive: calc(var(--sizeButton) * 4.8);
+  --colorBlue: rgba(148,187,233,1);
+  --colorYellow: rgb(240, 235, 153);
+  --colorBody: rgb(226, 214, 214);
+  --colorHeader: rgba(214, 204, 218, 0.4);
+}
+
+.header {
+  padding-top: calc(var(--index) * 0.5);
+  padding-left: 10px;
+  display: flex;
+  justify-content: start;
+  background-color: var(--colorHeader);
+  max-width: 100%;
+  height: calc(var(--index) * 3);
+  position: relative;
+  z-index: 5;
+border-bottom: .5px solid black;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.menu__iem {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+}
+
+.main {
+  font-family: 'CormorantGaramond-Light';
+  font-size: calc(var(--index) * 1.1);
+  line-height: calc(var(--index) * 0.4);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin-right: 43px;
+  margin: 0 6px;
+  padding: 10px;
+}
+
+.main::before {
+  content: '<';
+/* width: 8px;
+height: 8px; */
+/* border-radius: 50%; */
+font-size: 25px;
+/* background-color: black; */
+display: inline-block;
+margin-right: 10px;
+margin-bottom: 3px;
+}
+
+.menu.img-credits .main::before {
+  content: '';
+}
+
+.contacts {
+  /* width: 110px; */
+  height: 100%;
+  margin: 0 15px 5px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.contacts__item {
+  text-align: center;
+  /* width: 40px; */
+  height: 100%;
+  cursor: pointer;
+}
+
+.contacts__item img{
+/* width: 100%; */
+height: 100%;
+object-fit: cover;
+}
